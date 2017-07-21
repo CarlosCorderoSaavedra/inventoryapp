@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_margin"
+    android:orientation="vertical"
+    >
+
+  <!-- Name -->
+  <TextView
+      android:id="@+id/product_name_label"
+      android:text="@string/product_name_label"
+      style="@style/detail_label"
+      />
+
+  <TextView
+      android:id="@+id/product_name"
+      android:layout_toRightOf="@id/product_name_label"
+      android:gravity="right"
+      style="@style/detail_value"
+      />
+
+  <!-- Price -->
+  <TextView
+      android:id="@+id/product_price_label"
+      android:layout_below="@id/product_name_label"
+      android:text="@string/product_price_label"
+      style="@style/detail_label"
+      />
+
+  <TextView
+      android:id="@+id/product_price"
+      android:layout_below="@id/product_name_label"
+      android:layout_toRightOf="@id/product_price_label"
+      android:gravity="right"
+      style="@style/detail_value"
+      />
+
+  <!-- Availability -->
+
+
+  <LinearLayout
+      android:id="@+id/availability_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_below="@id/product_price_label"
+      >
+
+
+    <TextView
+        android:id="@+id/product_availability_label"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/product_price_label"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="@string/product_availability_label"
+        style="@style/detail_label"
+        />
+
+    <Button
+        android:id="@+id/decrease_count_button"
+        android:text="-"
+        style="@style/adjust_count_button"
+        />
+
+    <TextView
+        android:id="@+id/product_availability"
+        style="@style/product_availability_text_view"
+        />
+
+    <Button
+        android:id="@+id/increase_count_button"
+        android:text="+"
+        style="@style/adjust_count_button"
+        />
+
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/product_image_label"
+      android:layout_below="@id/availability_container"
+      android:gravity="center_vertical"
+      android:text="@string/product_image_label"
+      style="@style/detail_label"
+      />
+
+  <ImageView
+      android:id="@+id/product_image_detail"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/availability_container"
+      />
+
+  <Button
+      android:id="@+id/supply_order_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:padding="20dp"
+      android:text="@string/supplier_order_button"
+      />
+</RelativeLayout>
